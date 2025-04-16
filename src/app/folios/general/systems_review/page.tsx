@@ -37,7 +37,7 @@ export default function SystemsReview() {
         </h2>
       </div>
 
-      <section className="flex-1 px-5 pt-10 pb-5 rounded-[10px] flex flex-col justify-between">
+      <section className="flex-1 px-5 pt-10 pb-5 rounded-[10px] flex flex-col justify-start">
         {/* System icons grid */}
         <div className="flex flex-col gap-14">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -60,7 +60,7 @@ export default function SystemsReview() {
         {/* Text input area */}
         <div className="w-full mt-8 flex flex-col gap-2.5">
           <div className="w-full">
-            <div className="w-full h-60 p-5 bg-white rounded-md border border-zinc-200 flex flex-col justify-between items-end">
+            <div className="w-full h-80 p-5 bg-white rounded-md border border-zinc-200 flex flex-col justify-between items-end">
               <textarea
                 className="w-full flex-grow resize-none bg-transparent outline-none text-gray-800 placeholder-gray-400"
                 placeholder="Agregar anormalidad en..."

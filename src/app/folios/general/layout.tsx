@@ -10,7 +10,7 @@ export default function GeneralLayout({
     <>
       <div className="flex flex-col min-h-screen bg-white">
         {/* Header/Navbar */}
-        <header className="w-full bg-gray-800 shadow-md py-4 px-10 flex justify-between items-center">
+        <header className="w-full bg-gray-800 shadow-md py-4 px-10 flex justify-between items-center fixed top-0 left-0 right-0 z-10">
           <h1 className="text-white text-4xl font-medium">Historia Clínica</h1>
           <div className="flex items-center gap-5">
             <button className="px-7 py-3 bg-sky-500 text-white rounded-lg">
@@ -22,11 +22,11 @@ export default function GeneralLayout({
           </div>
         </header>
 
-        <div className="flex flex-1">
+        <div className="flex pt-[82px]">
           {/* Sidebar */}
-          <aside className="w-[280px] min-w-[280px] max-w-[280px] flex-shrink-0 bg-white shadow-lg flex flex-col px-10">
-            {/* Patient Info */}
-            <div className="py-5 flex flex-col items-center gap-4">
+          <aside className="w-[280px] min-w-[280px] max-w-[280px] bg-white shadow-lg flex flex-col fixed left-0 top-[82px] bottom-0 z-10">
+            {/* Patient Info - Fixed part */}
+            <div className="py-5 flex flex-col items-center gap-4 px-10">
               <div className="relative w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
                 <User className="w-full h-full p-2 text-gray-500" />
               </div>
@@ -56,8 +56,8 @@ export default function GeneralLayout({
               </div>
             </div>
 
-            {/* Navigation Menu */}
-            <nav className="flex-1 py-5 border-t border-black overflow-y-auto">
+            {/* Navigation Menu - Scrollable part */}
+            <nav className="flex-1 py-5 border-t border-black overflow-y-auto px-10">
               <ul className="p-2.5 flex flex-col gap-4">
                 <li className="flex items-center gap-2.5">
                   <div className="w-6 h-6 relative overflow-hidden">
@@ -88,20 +88,20 @@ export default function GeneralLayout({
               </ul>
             </nav>
           </aside>
-
-          {/* Main Content */}
-          <main className="flex-1 flex flex-col relative">
+          {/* Main Content  */}
+          <main className="flex-1 flex flex-col ml-[280px]">
             <div
               className="flex-1 overflow-y-auto bg-gray-50 shadow-md"
-              style={{ height: "calc(100vh - 72px)", paddingBottom: "68px" }}
+              style={{ height: "calc(100vh - 165px)"}}
             >
-              <div className="max-w-5xl mx-auto px-10 py-5 flex flex-col gap-3">
+              <div className="max-w-5xl mx-auto px-10 py-5 flex flex-col gap-3" style={{ height: "calc(100vh - 165px)"}}>
                 {children}
               </div>
             </div>
 
+            {/* Footer */}
             <footer
-              className="w-full px-10 py-4 bg-white border-t border-slate-100 flex justify-end items-center gap-5 fixed bottom-0 right-0"
+              className="px-10 py-4 bg-white border-t border-slate-100 flex justify-end items-center gap-5 fixed bottom-0 right-0"
               style={{ width: "calc(100% - 280px)" }}
             >
               <button className="w-28 px-7 py-3 bg-white text-gray-800 rounded-lg shadow-md border border-gray-100">
