@@ -60,7 +60,7 @@ export default function SystemsReview() {
         {/* Text input area */}
         <div className="w-full mt-8 flex flex-col gap-2.5">
           <div className="w-full">
-            <div className="w-full h-60 p-5 bg-white rounded-md border border-zinc-200 flex flex-col justify-between items-end">
+            <div className="w-full h-600 p-5 bg-white rounded-md border border-zinc-200 flex flex-col justify-between items-end">
               <textarea
                 className="w-full flex-grow resize-none bg-transparent outline-none text-gray-800 placeholder-gray-400"
                 placeholder="Agregar anormalidad en..."

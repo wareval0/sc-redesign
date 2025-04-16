@@ -91,13 +91,19 @@ export default function GeneralLayout({
 
           {/* Main Content */}
           <main className="flex-1 flex flex-col relative">
-            <div className="flex-1 overflow-y-auto bg-gray-50 shadow-md pb-24">
+            <div
+              className="flex-1 overflow-y-auto bg-gray-50 shadow-md"
+              style={{ height: "calc(100vh - 72px)", paddingBottom: "68px" }}
+            >
               <div className="max-w-5xl mx-auto px-10 py-5 flex flex-col gap-3">
                 {children}
               </div>
             </div>
 
-            <footer className="w-full px-10 py-4 bg-white border-t border-slate-100 flex justify-end items-center gap-5 absolute bottom-0 left-0">
+            <footer
+              className="w-full px-10 py-4 bg-white border-t border-slate-100 flex justify-end items-center gap-5 fixed bottom-0 right-0"
+              style={{ width: "calc(100% - 280px)" }}
+            >
               <button className="w-28 px-7 py-3 bg-white text-gray-800 rounded-lg shadow-md border border-gray-100">
                 Atrás
               </button>
