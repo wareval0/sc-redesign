@@ -90,20 +90,19 @@ export default function GeneralLayout({
           </aside>
 
           {/* Main Content */}
-          <main className="flex-1 flex flex-col">
-            <div className="flex-1 bg-gray-50 shadow-md">
+          <main className="flex-1 flex flex-col relative">
+            <div className="flex-1 overflow-y-auto bg-gray-50 shadow-md pb-24">
               <div className="max-w-5xl mx-auto px-10 py-5 flex flex-col gap-3">
                 {children}
               </div>
             </div>
 
-            {/* Footer */}
-            <footer className="w-full px-10 py-4 bg-white border-l border-slate-100 flex justify-end items-center gap-5">
+            <footer className="w-full px-10 py-4 bg-white border-t border-slate-100 flex justify-end items-center gap-5 absolute bottom-0 left-0">
               <button className="w-28 px-7 py-3 bg-white text-gray-800 rounded-lg shadow-md border border-gray-100">
                 Atrás
               </button>
               <button className="w-28 px-7 py-3 bg-sky-500 text-white rounded-lg shadow-md">
-                Siguente
+                Siguiente
               </button>
             </footer>
           </main>

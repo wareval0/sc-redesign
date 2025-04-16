@@ -60,19 +60,18 @@ export default function SystemsReview() {
         {/* Text input area */}
         <div className="w-full mt-8 flex flex-col gap-2.5">
           <div className="w-full">
-          <div className="w-full h-70 p-5 bg-white rounded-md border border-zinc-200 flex items-start gap-4">
-  <textarea
-    className="w-full h-70 resize-none bg-transparent outline-none text-gray-800 placeholder-gray-400"
-    placeholder="Agregar anormalidad en..."
-    maxLength={500}
-  />
-  <div className="w-24 flex items-end h-full shrink-0">
-    <button className="w-full px-4 py-2 bg-sky-500 text-white rounded-lg">
-      Añadir
-    </button>
-  </div>
-</div>
-
+            <div className="w-full h-60 p-5 bg-white rounded-md border border-zinc-200 flex flex-col justify-between items-end">
+              <textarea
+                className="w-full flex-grow resize-none bg-transparent outline-none text-gray-800 placeholder-gray-400"
+                placeholder="Agregar anormalidad en..."
+                maxLength={500}
+              />
+              <div className="w-24 flex items-end h-auto pt-1">
+                <button className="w-full px-7 py-3 bg-sky-500 text-white rounded-lg">
+                  Añadir
+                </button>
+              </div>
+            </div>
           </div>
           <div className="flex justify-end">
             <span className="text-sm text-gray-500">0/500</span>
