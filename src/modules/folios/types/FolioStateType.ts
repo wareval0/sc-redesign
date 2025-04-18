@@ -1,8 +1,9 @@
-import { AnamnesisType } from "./AnamnesisType";
+import { AnamnesisType, SystemsReviewType } from "./types";
 
 export type FolioStateType = {
-  step: number;
   anamnesis: AnamnesisType;
-  setStep: (step: number) => void;
+  systemsReview: SystemsReviewType
   setAnamnesis: (anamnesis: AnamnesisType) => void;
+  setSystemsReview: (systemsReview: SystemsReviewType) => void;
+  reset: () => void;
 };
