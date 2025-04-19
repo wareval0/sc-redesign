@@ -15,8 +15,8 @@ export default function PaymentPage() {
                 data-epayco-country='CO' 
                 data-epayco-test='true' 
                 data-epayco-external='false' 
-                data-epayco-response='https://sc-redesign.vercel.app/payment/confirm'  
-                data-epayco-confirmation='https://sc-redesign.vercel.app/payment/response' 
+                data-epayco-response='https://sc-redesign.vercel.app/payment/response'
+                data-epayco-confirmation='https://sc-redesign.vercel.app/payment/confirm'
                 data-epayco-button='https://multimedia.epayco.co/dashboard/btns/btn5.png'> 
             </script> 
         </form>
