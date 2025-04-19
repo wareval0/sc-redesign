@@ -1,0 +1,24 @@
+export type AntecedentsType = {
+  nutrition?: string;
+  physicalActivity?: string;
+  hydration?: string;
+  supplements?: string;
+  sleep?: string;
+  pathological?: string;
+  pharmacological?: string;
+  surgical?: string;
+  hospitalizations?: string;
+  toxic?: string;
+  allergic?: string;
+  immunization?: string;
+  traumatic?: string;
+  occupational?: string;
+  familyHypertension?: string;
+  familyHeartDisease?: string;
+  familySeizures?: string;
+  familyMentalDisorders?: string;
+  familyCancer?: string;
+  familyDiabetes?: string;
+  familyCerebrovascularDisease?: string;
+  familyOther?: string;
+};

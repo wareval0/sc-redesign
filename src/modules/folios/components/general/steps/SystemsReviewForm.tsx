@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -9,8 +10,9 @@ import { useFolioStore, useFormNavigation } from "@/modules/folios/hooks/hooks";
 import { User } from "lucide-react";
 
 export default function SystemsReviewForm() {
+  const router = useRouter();
   const { systemsReview, setSystemsReview } = useFolioStore();
-  const { incrementStep, setSubmitCurrentForm } = useFormNavigation();
+  const { step, steps, incrementStep, setSubmitCurrentForm } = useFormNavigation();
 
   const {
     handleSubmit,
@@ -33,8 +35,9 @@ export default function SystemsReviewForm() {
     (data: SystemsReviewType) => {
       setSystemsReview(data);
       incrementStep();
+      router.push(steps[step + 1]);
     },
-    [incrementStep, setSystemsReview]
+    [incrementStep, router, setSystemsReview, step, steps]
   );
 
   useEffect(() => {
@@ -205,7 +208,7 @@ export default function SystemsReviewForm() {
                   placeholder={
                     selectedSystem
                       ? "Describe la anormalidad..."
-                      : "Seleccione un sistema primero"
+                      : "Seleccione un sistema"
                   }
                   maxLength={500}
                 />
